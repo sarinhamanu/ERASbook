@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\livrosmodel;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
@@ -14,7 +15,7 @@ class cadastrolivrosrequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,9 +27,9 @@ class cadastrolivrosrequest extends FormRequest
     {
         return [
            
-                'nome do livro' => 'required',
+                'nomeDoLivro' => 'required',
                 'resumo' => 'required',
-                'codigo do livro' => 'required|unique',
+                'codigoDoLivro' => 'required|unique:livros,codigoDoLivro',
                
               
             ];

@@ -6,3 +6,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('create',[CadastroLivrosController::class,'create']);
+
+Route::get('/find/{id}' ,[CadastroLivrosController::class, 'pesquisarPorid']);
