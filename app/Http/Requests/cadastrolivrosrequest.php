@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Auth\Events\Validated;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Validation\Validator as ValidationValidator;
 
 class cadastrolivrosrequest extends FormRequest
 {
@@ -29,19 +29,30 @@ class cadastrolivrosrequest extends FormRequest
                 'nome do livro' => 'required',
                 'resumo' => 'required',
                 'codigo do livro' => 'required|unique',
-                'imagens' => 'required',
+               
               
             ];
        
     }
+    public function failedValidation (Validator $validator){
+        throw new HttpResponseException(response()->json([
+            'sucess' => false,
+            'error' => $validator->errors()
+        ]));
+    }
 
-public function failedvalidation(Validator $validator)
-{
-throw new HttpResponseException(response()->json([
-    'success' => false,
-]));
+    public Function messages(){
+        return [
+            'nomeDoLivro.required'=> 'O campo nome do livro é obrigatorio',
+            'resumo.required' =>'Resumo obrigatorio',
+            'autor.required' => 'autor obrigatorio',
+            'codigoDoLivro.unique' => 'formato de codigo invalido'
+    
+        ];
+    }
 
-}
+
+
 
 
 

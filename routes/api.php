@@ -5,4 +5,4 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-Route::post('livros',[CadastroLivrosController::class,'livros']);
+Route::post('create',[CadastroLivrosController::class,'create']);

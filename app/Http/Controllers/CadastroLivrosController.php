@@ -8,18 +8,18 @@ use Illuminate\Http\Request;
 
 class CadastroLivrosController extends Controller
 {
-    public function create (cadastrolivrosrequest $request){
+    public function create(cadastrolivrosrequest $request)
+    {
         $cadastroslivro = livrosmodel::create([
-         'nome do livro' => $request->nomedolivro,
-         'resumo' =>$request->resumo,
-         'codigo do livro' => $request->codigodolivro,
-         'imagens' => $request->email,
+            'nomeDoLivro' => $request->nomeDoLivro,
+            'resumo' => $request->resumo,
+            'codigoDoLivro' => $request->codigoDoLivro,
+            'imagens' => $request->imagens,
         ]);
         return response()->json([
             "success" => true,
             "message" => "usuario cadastrado com sucesso",
             "data"    => $cadastroslivro
-        ],200);
-       }
+        ], 200);
     }
-
+}
