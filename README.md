@@ -19,7 +19,7 @@ Certifique-se de ter os seguintes requisitos atendidos antes de começar a traba
 
 1. Clone este repositório para o seu ambiente de desenvolvimento local utilizando o comando:
 ```
- git clone https://github.com/MIMIMINISAIA/ERASbook-api.git
+ git clone https://github.com/sarinhamanu/ERASbook.git
 ```
 2. Acesse o diretório do projeto:
 ```
@@ -35,10 +35,10 @@ copy .env.example .env
 ```
 5. Acessar o Visual Studio Code
 ```
-code .
+code .  
 ```
 ## insomnia
-[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=ERAS%20book%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FMIMIMINISAIA%2FERASbook-api%2Fmain%2Finsomnia.json%3Ftoken%3DGHSAT0AAAAAACGBYMFUXUORKK3ULPO74DHWZGSEWDQ)
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=ERAS%20book%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fsarinhamanu%2FERASbook-api%2Fmain%2Finsomnia.json%3Ftoken%3DGHSAT0AAAAAACGBYMFUXUORKK3ULPO74DHWZGSEWDQ)
 
 ## Funcionalidades
 
@@ -55,7 +55,7 @@ Este projeto está licenciado sob a [MIT License](LICENSE), o que significa que 
 ## Contato
 
 Em caso de dúvidas, sugestões ou problemas, sinta-se à vontade para entrar em contato através do email: 
-emillybeatrizamoroso@Gmail.com
+sarasejbrs@gmail.com
 
 **Aviso**: Certifique-se de substituir "username" no link de clonagem e "email..." na seção de contato pelos valores correspondentes do seu próprio usuário do GitHub e endereço de e-mail.
 
